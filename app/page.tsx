@@ -14,9 +14,9 @@ export default function HomePage() {
               Wir vermieten den legendären Hau den Lukas und eine professionelle Musikanlage für Festivals,
               Vereinsfeste, Partys und lokale Feierlichkeiten. Rustikal, lautstark und garantiert ein Blickfang.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <a className="btn-primary" href="/kontakt">Jetzt anfragen</a>
-              <a className="btn-ghost" href="tel:+491629222164">Anrufen</a>
+            <div className="flex flex-col gap-3 lg:flex-row">
+              <a className="btn-primary w-full lg:w-auto" href="/kontakt">Jetzt anfragen</a>
+              <a className="btn-ghost w-full lg:w-auto" href="tel:+491629222164">Anrufen</a>
             </div>
             <div className="grid gap-4 sm:grid-cols-3">
               {[
@@ -113,9 +113,9 @@ export default function HomePage() {
           <div className="panel space-y-4 reveal-delay-1">
             <p className="text-sm uppercase tracking-[0.3em] text-[color:var(--sand)]">Direkter Draht</p>
             <p className="text-lg font-semibold">Ruf an oder schreib uns direkt.</p>
-            <div className="flex flex-wrap gap-3">
-              <a className="btn-primary" href="/kontakt">Jetzt anfragen</a>
-              <a className="btn-ghost" href="tel:+491629222164">+49 162 9222164</a>
+            <div className="flex flex-col gap-3 lg:flex-row">
+              <a className="btn-primary w-full lg:w-auto" href="/kontakt">Jetzt anfragen</a>
+              <a className="btn-ghost w-full lg:w-auto" href="tel:+491629222164">+49 162 9222164</a>
             </div>
             <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--sand)]">Preis auf Anfrage</p>
           </div>

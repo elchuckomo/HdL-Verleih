@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
-      <body className="bg-hero-grain">
+      <body className="bg-hero-grain overflow-x-hidden">
         <a
           href="#content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-50 focus:rounded-full focus:bg-[color:var(--gold)] focus:px-4 focus:py-2 focus:text-[color:var(--bg)]"
@@ -31,25 +31,45 @@ export default function RootLayout({
           Zum Inhalt springen
         </a>
         <header className="border-b border-white/10 bg-[color:var(--bg)]/95">
-          <div className="wrap flex flex-col gap-6 py-6 md:flex-row md:items-center md:justify-between">
-            <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-[color:var(--gold)] bg-[color:var(--iron)] p-1 float-glow">
-                {/* Place your logo at /public/logo.png */}
-                <Image
-                  src="/logo.png"
-                  alt="HdL-Verleih Logo"
-                  width={40}
-                  height={40}
-                  className="h-10 w-10 rounded-full object-contain"
-                  priority
-                />
+          <div className="wrap flex flex-col gap-4 py-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-[color:var(--gold)] bg-[color:var(--iron)] p-1 float-glow">
+                  {/* Place your logo at /public/logo.png */}
+                  <Image
+                    src="/logo.png"
+                    alt="HdL-Verleih Logo"
+                    width={40}
+                    height={40}
+                    className="h-10 w-10 rounded-full object-contain"
+                    priority
+                  />
+                </div>
+                <div>
+                  <p className="text-sm uppercase tracking-[0.4em] text-[color:var(--sand)]">Eventverleih</p>
+                  <p className="text-2xl font-semibold uppercase tracking-[0.12em]">HdL-Verleih</p>
+                </div>
               </div>
-              <div>
-                <p className="text-sm uppercase tracking-[0.4em] text-[color:var(--sand)]">Eventverleih</p>
-                <p className="text-2xl font-semibold uppercase tracking-[0.12em]">HdL-Verleih</p>
-              </div>
+              <details className="relative lg:hidden">
+                <summary className="cursor-pointer list-none rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-[0.3em] text-[color:var(--sand)]">
+                  Menü
+                </summary>
+                <div className="absolute right-0 mt-3 w-56 rounded-2xl border border-white/10 bg-[color:var(--bg-soft)] p-3 shadow-stamp">
+                  <nav className="flex flex-col gap-2 text-sm uppercase tracking-[0.22em] text-[color:var(--sand)]">
+                    {navItems.map((item) => (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        className="rounded-full border border-transparent px-3 py-2 transition hover:border-white/30 hover:text-white"
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </nav>
+                </div>
+              </details>
             </div>
-            <nav className="flex flex-wrap gap-3 text-sm uppercase tracking-[0.22em] text-[color:var(--sand)]">
+            <nav className="hidden flex-wrap gap-3 text-sm uppercase tracking-[0.22em] text-[color:var(--sand)] lg:flex">
               {navItems.map((item) => (
                 <a
                   key={item.href}

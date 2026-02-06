@@ -54,9 +54,9 @@ export default function LeistungenPage() {
                 </li>
               ))}
             </ul>
-            <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-4">
+            <div className="flex flex-col gap-3 border-t border-white/10 pt-4 lg:flex-row lg:items-center lg:justify-between">
               <span className="text-sm uppercase tracking-[0.3em] text-[color:var(--sand)]">Preis auf Anfrage</span>
-              <a className="btn-primary" href="/kontakt">Anfrage stellen</a>
+              <a className="btn-primary w-full lg:w-auto" href="/kontakt">Anfrage stellen</a>
             </div>
           </article>
         ))}

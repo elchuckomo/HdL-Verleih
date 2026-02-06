@@ -1,4 +1,4 @@
-﻿export const metadata = {
+export const metadata = {
   title: "Kontakt | HdL-Verleih",
   description: "Kontakt zu HdL-Verleih. Preise auf Anfrage, persönliche Beratung.",
 };
