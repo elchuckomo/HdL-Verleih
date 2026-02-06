@@ -40,7 +40,7 @@ export default function LeistungenPage() {
 
       <div className="grid gap-8 lg:grid-cols-2">
         {services.map((service) => (
-          <article key={service.title} className="panel space-y-4 p-5 lg:p-6 reveal-delay-1">
+          <article key={service.title} className="panel space-y-4 p-5 text-center sm:text-left lg:p-6 reveal-delay-1">
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-[color:var(--sand)]">{service.title}</p>
               <h2 className="mt-3 text-xl font-semibold uppercase tracking-[0.06em] sm:text-2xl sm:tracking-[0.08em] lg:text-2xl">
@@ -48,15 +48,15 @@ export default function LeistungenPage() {
               </h2>
               <p className="mt-3 text-sm text-[color:var(--muted)]">{service.body}</p>
             </div>
-            <ul className="space-y-2 text-sm text-[color:var(--muted)]">
+            <ul className="space-y-2 text-sm text-[color:var(--muted)] text-center sm:text-left">
               {service.list.map((item) => (
-                <li key={item} className="flex items-start gap-2">
+                <li key={item} className="flex items-start justify-center gap-2 sm:justify-start">
                   <span className="mt-1 h-2 w-2 rounded-full bg-[color:var(--gold)]" />
                   {item}
                 </li>
               ))}
             </ul>
-            <div className="flex flex-col gap-3 border-t border-white/10 pt-4 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex flex-col items-center gap-3 border-t border-white/10 pt-4 sm:items-start lg:flex-row lg:items-center lg:justify-between">
               <span className="text-sm uppercase tracking-[0.3em] text-[color:var(--sand)]">Preis auf Anfrage</span>
               <a className="btn-primary w-full lg:w-auto" href="/kontakt">Anfrage stellen</a>
             </div>
