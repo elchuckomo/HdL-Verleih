@@ -4,10 +4,10 @@ export default function HomePage() {
   return (
     <div>
       <section className="relative overflow-hidden border-b border-white/10">
-        <div className="wrap grid gap-10 py-16 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="wrap grid gap-8 py-12 lg:gap-10 lg:py-16 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="space-y-6 reveal">
             <span className="badge">Hau den Lukas · Sound · Eventpower</span>
-            <h1 className="text-4xl font-semibold uppercase leading-tight tracking-[0.08em] sm:text-5xl">
+            <h1 className="text-3xl font-semibold uppercase leading-tight tracking-[0.04em] sm:text-4xl sm:tracking-[0.08em] lg:text-5xl">
               HdL-Verleih bringt den Jahrmarktspuls auf dein Fest.
             </h1>
             <p className="text-lg text-[color:var(--muted)]">
@@ -47,7 +47,7 @@ export default function HomePage() {
             </div>
             <div className="text-center">
               <p className="section-sub">Auf einen Blick</p>
-              <p className="text-2xl font-semibold uppercase tracking-[0.16em] sm:text-3xl">Event-Checkliste</p>
+              <p className="text-xl font-semibold uppercase tracking-[0.12em] sm:text-2xl sm:tracking-[0.16em] lg:text-3xl">Event-Checkliste</p>
             </div>
             <div className="grid w-full gap-3">
               <div className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-[color:var(--iron)] px-5 py-4 sm:flex-row sm:items-center sm:justify-between">

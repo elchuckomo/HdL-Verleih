@@ -28,10 +28,10 @@ const services = [
 
 export default function LeistungenPage() {
   return (
-    <div className="wrap space-y-12 py-16">
+    <div className="wrap space-y-12 py-12 lg:py-16">
       <header className="space-y-4 reveal">
         <p className="section-sub">Leistungen / Vermietung</p>
-        <h1 className="section-title">Zwei Highlights für starke Events.</h1>
+        <h1 className="section-title text-2xl sm:text-3xl lg:text-4xl">Zwei Highlights für starke Events.</h1>
         <p className="text-[color:var(--muted)]">
           Egal ob Volksfest, Firmenfeier oder Geburtstag – HdL-Verleih sorgt für den richtigen Mix aus
           Wettbewerb, Show und klarem Sound.
