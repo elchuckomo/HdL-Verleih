@@ -40,10 +40,12 @@ export default function LeistungenPage() {
 
       <div className="grid gap-8 lg:grid-cols-2">
         {services.map((service) => (
-          <article key={service.title} className="panel space-y-4 reveal-delay-1">
+          <article key={service.title} className="panel space-y-4 p-5 lg:p-6 reveal-delay-1">
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-[color:var(--sand)]">{service.title}</p>
-              <h2 className="mt-3 text-2xl font-semibold uppercase tracking-[0.08em]">{service.lead}</h2>
+              <h2 className="mt-3 text-xl font-semibold uppercase tracking-[0.06em] sm:text-2xl sm:tracking-[0.08em] lg:text-2xl">
+                {service.lead}
+              </h2>
               <p className="mt-3 text-sm text-[color:var(--muted)]">{service.body}</p>
             </div>
             <ul className="space-y-2 text-sm text-[color:var(--muted)]">
