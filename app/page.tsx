@@ -41,24 +41,24 @@ export default function HomePage() {
                 alt="HdL-Verleih Logo"
                 width={220}
                 height={220}
-                className="h-40 w-40 object-contain sm:h-44 sm:w-44"
+                className="h-auto w-full max-w-[220px] object-contain sm:max-w-[240px]"
                 priority
               />
             </div>
             <div className="text-center">
               <p className="section-sub">Auf einen Blick</p>
-              <p className="text-3xl font-semibold uppercase tracking-[0.16em]">Event-Checkliste</p>
+              <p className="text-2xl font-semibold uppercase tracking-[0.16em] sm:text-3xl">Event-Checkliste</p>
             </div>
             <div className="grid w-full gap-3">
-              <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-[color:var(--iron)] px-5 py-4">
+              <div className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-[color:var(--iron)] px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
                 <span className="text-xs uppercase tracking-[0.3em] text-[color:var(--sand)]">Aufbau</span>
                 <span className="text-base font-semibold">Schnell & unkompliziert</span>
               </div>
-              <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-[color:var(--iron)] px-5 py-4">
+              <div className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-[color:var(--iron)] px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
                 <span className="text-xs uppercase tracking-[0.3em] text-[color:var(--sand)]">Einsatz</span>
                 <span className="text-base font-semibold">Innen & außen</span>
               </div>
-              <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-[color:var(--iron)] px-5 py-4">
+              <div className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-[color:var(--iron)] px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
                 <span className="text-xs uppercase tracking-[0.3em] text-[color:var(--sand)]">Betreuung</span>
                 <span className="text-base font-semibold">Persönliche Abstimmung</span>
               </div>

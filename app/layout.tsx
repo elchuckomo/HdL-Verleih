@@ -50,11 +50,11 @@ export default function RootLayout({
                   <p className="text-2xl font-semibold uppercase tracking-[0.12em]">HdL-Verleih</p>
                 </div>
               </div>
-              <details className="relative lg:hidden">
+              <details className="relative z-50 lg:hidden">
                 <summary className="cursor-pointer list-none rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-[0.3em] text-[color:var(--sand)]">
                   Menü
                 </summary>
-                <div className="absolute right-0 mt-3 w-56 rounded-2xl border border-white/10 bg-[color:var(--bg-soft)] p-3 shadow-stamp">
+                <div className="absolute right-0 z-50 mt-3 w-56 rounded-2xl border border-white/10 bg-[color:var(--bg-soft)] p-3 shadow-stamp">
                   <nav className="flex flex-col gap-2 text-sm uppercase tracking-[0.22em] text-[color:var(--sand)]">
                     {navItems.map((item) => (
                       <a
