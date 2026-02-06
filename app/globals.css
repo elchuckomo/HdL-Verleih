@@ -1,0 +1,119 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg: #0f1113;
+  --bg-soft: #171a1f;
+  --beige: #f2e6d2;
+  --sand: #e4cda5;
+  --wood: #8a5a2b;
+  --iron: #2f353b;
+  --poster: #c04a2b;
+  --gold: #f3b34a;
+  --muted: #b5a38a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", "Verdana", sans-serif;
+  color: var(--beige);
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 55%),
+    linear-gradient(145deg, #0d0f12, #12161b 45%, #0b0d10);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Rockwell", "Copperplate", "Palatino", serif;
+  letter-spacing: 0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(243, 179, 74, 0);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(243, 179, 74, 0.35);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-delay-1,
+  .reveal-delay-2,
+  .reveal-delay-3,
+  .float-glow {
+    animation: none !important;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-6xl px-6;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-[0.3em];
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-[color:var(--poster)] px-6 py-3 text-base font-semibold text-white shadow-stamp transition hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--gold)];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-full border border-[color:var(--gold)] px-6 py-3 text-base font-semibold text-[color:var(--gold)] transition hover:bg-[color:var(--gold)] hover:text-[color:var(--bg)];
+  }
+
+  .panel {
+    @apply rounded-3xl border border-white/10 bg-[color:var(--bg-soft)] p-6 shadow-stamp;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl font-semibold uppercase tracking-[0.12em];
+  }
+
+  .section-sub {
+    @apply text-sm uppercase tracking-[0.4em] text-[color:var(--sand)];
+  }
+
+  .reveal {
+    animation: rise 0.8s ease forwards;
+  }
+
+  .reveal-delay-1 {
+    animation: rise 0.8s ease 0.12s forwards;
+  }
+
+  .reveal-delay-2 {
+    animation: rise 0.8s ease 0.24s forwards;
+  }
+
+  .reveal-delay-3 {
+    animation: rise 0.8s ease 0.36s forwards;
+  }
+
+  .float-glow {
+    animation: pulse-glow 3.2s ease-in-out infinite;
+  }
+}
