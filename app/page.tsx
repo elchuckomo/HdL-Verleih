@@ -76,7 +76,7 @@ export default function HomePage() {
           <p className="section-sub">Was wir vermieten</p>
           <h2 className="section-title">Klassiker für starke Auftritte.</h2>
           <p className="text-[color:var(--muted)]">
-            HdL-Verleih liefert das Herzstück jeder fairground-inspirierten Feier: den Hau den Lukas.
+            HdL-Verleih liefert Volksfest-Atmosphäre für jede Feier: den Hau den Lukas.
             Kombiniert mit einer kraftvollen Musikanlage entsteht eine Bühne für Wettbewerb, Jubel und klare Ansagen.
           </p>
         </div>

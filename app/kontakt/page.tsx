@@ -30,17 +30,6 @@ export default function KontaktPage() {
             <p className="text-sm uppercase tracking-[0.3em] text-[color:var(--sand)]">E-Mail</p>
             <a className="mt-2 inline-block text-lg font-semibold text-[color:var(--gold)]" href="mailto:sven_armand@web.de">sven_armand@web.de</a>
           </div>
-          <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-[color:var(--sand)]">Google Maps</p>
-            <a
-              className="mt-2 inline-flex items-center gap-2 text-sm uppercase tracking-[0.3em] text-[color:var(--sand)] underline-offset-4 hover:underline"
-              href="https://maps.google.com/?q=Zum%20Hermannsberg%207%2C%2035066%20Frankenberg%20(Eder)"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Karte öffnen
-            </a>
-          </div>
         </div>
       </div>
 
@@ -50,30 +39,16 @@ export default function KontaktPage() {
           <h2 className="text-2xl font-semibold uppercase tracking-[0.08em]">Sag uns, was du planst.</h2>
         </div>
         <p className="text-sm text-[color:var(--muted)]">
-          Nutze die Kontaktdaten oder sende uns direkt eine Nachricht. Keine Buchung online,
+          Nutze die Kontaktdaten oder öffne eine E-Mail mit deinen Eckdaten. Keine Buchung online,
           sondern persönlicher Austausch.
         </p>
-        <form className="space-y-4" action="mailto:sven_armand@web.de" method="post" encType="text/plain">
-          <input
-            className="w-full rounded-2xl border border-white/10 bg-[color:var(--iron)]/80 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-[color:var(--gold)]"
-            type="text"
-            name="name"
-            placeholder="Name"
-          />
-          <input
-            className="w-full rounded-2xl border border-white/10 bg-[color:var(--iron)]/80 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-[color:var(--gold)]"
-            type="email"
-            name="email"
-            placeholder="E-Mail"
-          />
-          <textarea
-            className="h-28 w-full rounded-2xl border border-white/10 bg-[color:var(--iron)]/80 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-[color:var(--gold)]"
-            name="message"
-            placeholder="Wunschtermin, Eventtyp, Ort ..."
-          />
-          <button className="btn-primary w-full" type="submit">Nachricht vorbereiten</button>
-          <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--sand)]">Preis auf Anfrage</p>
-        </form>
+        <a
+          className="btn-primary w-full"
+          href="mailto:sven_armand@web.de?subject=Anfrage%20HdL-Verleih&body=Datum:%0AOrt:%0AArt%20der%20Veranstaltung:%0A"
+        >
+          E-Mail mit Anfrage öffnen
+        </a>
+        <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--sand)]">Preis auf Anfrage</p>
       </div>
     </div>
   );

@@ -24,6 +24,7 @@ export default function DatenschutzPage() {
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--sand)]">2. Hosting und Zugriffsdaten</p>
           <p>Diese Website wird bei einem externen Hosting-Anbieter betrieben.</p>
+          <p>Hosting-Anbieter: Vercel Inc.</p>
           <p>Beim Besuch dieser Website werden durch den Hosting-Anbieter automatisch folgende Daten verarbeitet:</p>
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li>IP-Adresse</li>
