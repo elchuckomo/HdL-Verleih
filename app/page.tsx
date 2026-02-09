@@ -8,7 +8,7 @@ export default function HomePage() {
           <div className="space-y-6 reveal">
             <span className="badge">Hau den Lukas · Sound · Eventpower</span>
             <h1 className="text-3xl font-semibold uppercase leading-tight tracking-[0.04em] sm:text-4xl sm:tracking-[0.08em] lg:text-5xl">
-              HdL-Verleih bringt den Jahrmarktspuls auf dein Fest.
+              HdL-Verleih bringt Volksfest-Atmosphäre auf dein Fest.
             </h1>
             <p className="text-lg text-[color:var(--muted)]">
               Wir vermieten den legendären Hau den Lukas und eine professionelle Musikanlage für Festivals,
