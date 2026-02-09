@@ -1,4 +1,4 @@
-﻿export const metadata = {
+export const metadata = {
   title: "Leistungen | HdL-Verleih",
   description: "Hau den Lukas und professionelle Musikanlage für Feste, Festivals und Events. Preis auf Anfrage.",
 };
@@ -42,24 +42,24 @@ export default function LeistungenPage() {
         {services.map((service) => (
           <article
             key={service.title}
-            className="panel mx-auto w-full max-w-md space-y-4 p-5 text-center sm:text-left lg:mx-0 lg:max-w-none lg:p-6 reveal-delay-1"
+            className="panel mx-auto w-[92%] max-w-md space-y-4 p-5 !text-left lg:mx-0 lg:w-full lg:max-w-none lg:p-6 reveal-delay-1"
           >
             <div>
-              <p className="text-sm uppercase tracking-[0.3em] text-[color:var(--sand)]">{service.title}</p>
-              <h2 className="mt-3 text-xl font-semibold uppercase tracking-[0.06em] sm:text-2xl sm:tracking-[0.08em] lg:text-2xl">
+              <p className="text-sm uppercase tracking-[0.3em] text-[color:var(--sand)] !text-left">{service.title}</p>
+              <h2 className="mt-3 text-xl font-semibold uppercase tracking-[0.06em] sm:text-2xl sm:tracking-[0.08em] lg:text-2xl !text-left">
                 {service.lead}
               </h2>
-              <p className="mt-3 text-sm text-[color:var(--muted)]">{service.body}</p>
+              <p className="mt-3 text-sm text-[color:var(--muted)] !text-left">{service.body}</p>
             </div>
-            <ul className="space-y-2 text-sm text-[color:var(--muted)] text-center sm:text-left">
+            <ul className="space-y-2 text-sm text-[color:var(--muted)] !text-left">
               {service.list.map((item) => (
-                <li key={item} className="flex items-start justify-center gap-2 sm:justify-start">
+                <li key={item} className="flex items-start gap-2">
                   <span className="mt-1 h-2 w-2 rounded-full bg-[color:var(--gold)]" />
                   {item}
                 </li>
               ))}
             </ul>
-            <div className="flex flex-col items-center gap-3 border-t border-white/10 pt-4 sm:items-start lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex flex-col items-start gap-3 border-t border-white/10 pt-4 lg:flex-row lg:items-center lg:justify-between !text-left">
               <span className="text-sm uppercase tracking-[0.3em] text-[color:var(--sand)]">Preis auf Anfrage</span>
               <a className="btn-primary w-full lg:w-auto" href="/kontakt">Anfrage stellen</a>
             </div>
