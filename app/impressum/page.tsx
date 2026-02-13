@@ -29,6 +29,16 @@ export default function ImpressumPage() {
           <p>Sven Armand</p>
           <p>Adresse wie oben</p>
         </div>
+        <div>
+          <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--sand)]">Hinweis gemäß Art. 14 ODR-Verordnung:</p>
+          <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:</p>
+          <p>
+            <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noreferrer">
+              https://ec.europa.eu/consumers/odr/
+            </a>
+          </p>
+          <p>Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+        </div>
       </section>
     </div>
   );
