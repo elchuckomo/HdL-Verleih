@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Impressum | HdL-Verleih",
+  title: "Impressum",
   description: "Impressum von HdL-Verleih.",
 };
 

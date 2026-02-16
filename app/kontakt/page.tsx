@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Kontakt | HdL-Verleih",
+  title: "Kontakt",
   description: "Kontakt zu HdL-Verleih. Preise auf Anfrage, persönliche Beratung.",
 };
 

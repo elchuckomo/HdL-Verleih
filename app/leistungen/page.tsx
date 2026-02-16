@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Leistungen | HdL-Verleih",
+  title: "Leistungen",
   description: "Hau den Lukas und professionelle Musikanlage für Feste, Festivals und Events. Preis auf Anfrage.",
 };
 

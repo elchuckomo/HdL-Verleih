@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Datenschutz | HdL-Verleih",
+  title: "Datenschutz",
   description: "Datenschutzhinweise von HdL-Verleih.",
 };
 
