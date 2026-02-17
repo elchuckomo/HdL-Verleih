@@ -66,7 +66,7 @@ export default function RootLayout({
               </div>
               <details className="relative z-50 lg:hidden">
                 <summary className="cursor-pointer list-none rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-[0.3em] text-[color:var(--sand)]">
-                  MenÃ¼
+                  Menü
                 </summary>
                 <div className="absolute right-0 z-50 mt-3 w-56 rounded-2xl border border-white/10 bg-[color:var(--bg-soft)] p-3 shadow-stamp">
                   <nav className="flex flex-col gap-2 text-sm uppercase tracking-[0.22em] text-[color:var(--sand)]">
@@ -116,7 +116,7 @@ export default function RootLayout({
                 <p className="text-lg font-semibold uppercase tracking-[0.12em]">HdL-Verleih</p>
               </div>
               <p className="text-sm text-[color:var(--muted)]">Zum Hermannsberg 7</p>
-              <p className="text-sm text-[color:var(--muted)]">35066 Frankenberg (Eder) OT ViermÃ¼nden</p>
+              <p className="text-sm text-[color:var(--muted)]">35066 Frankenberg (Eder) OT Viermünden</p>
             </div>
             <div className="space-y-2 text-sm text-[color:var(--muted)]">
               <p>Telefon: <a className="text-[color:var(--gold)]" href="tel:+491629222164">+49 162 9222164</a></p>
@@ -124,13 +124,13 @@ export default function RootLayout({
               <p>Preis: <span className="text-[color:var(--gold)]">auf Anfrage</span></p>
             </div>
             <div className="space-y-2 text-sm text-[color:var(--muted)]">
-              <p className="uppercase tracking-[0.3em] text-[color:var(--sand)]">Bereit fÃ¼r den Kracher?</p>
+              <p className="uppercase tracking-[0.3em] text-[color:var(--sand)]">Bereit für den Kracher?</p>
               <a className="btn-primary w-fit" href="/kontakt">Jetzt anfragen</a>
             </div>
           </div>
           <div className="border-t border-white/5">
             <div className="wrap flex flex-col items-start justify-between gap-3 py-4 text-xs text-[color:var(--muted)] md:flex-row">
-              <p>Â© 2026 HdL-Verleih. Alle Rechte vorbehalten.</p>
+              <p>© 2026 HdL-Verleih. Alle Rechte vorbehalten.</p>
               <div className="flex gap-4">
                 <a href="/impressum">Impressum</a>
                 <a href="/datenschutz">Datenschutz</a>
