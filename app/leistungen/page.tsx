@@ -1,67 +1,82 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export const metadata = {
-  title: "Leistungen",
-  description: "Hau den Lukas und professionelle Musikanlage für Feste, Festivals und Events. Preis auf Anfrage.",
+  title: "Angebot",
+  description:
+    "Hau den Lukas und Musikanlage bei HDL-Verleih mieten. Für Vereinsfeste, Feiern, Partys und lokale Veranstaltungen in der Region Frankenberg (Eder).",
+  alternates: {
+    canonical: "/leistungen",
+  },
 };
 
 const services = [
   {
     title: "Hau den Lukas",
-    lead: "Der Klassiker mit Wettkampfcharakter.",
-    body: "Ideal für Festivals, Jahrmärkte, Geburtstage und Firmenevents. Der Hau den Lukas zieht Blicke an, bringt Menschen zusammen und sorgt für sportlichen Ehrgeiz.",
+    lead: "Eine Attraktion, die Gäste sofort verstehen.",
+    body: "Aufstellen, erklären, mitmachen: Der Hau den Lukas eignet sich für Veranstaltungen, bei denen Menschen ins Gespräch kommen, anfeuern und eine einfache Kraftprobe ausprobieren sollen.",
+    image: "/gallery/Hau den Lukas erster Einsatz.jpeg",
+    alt: "Aufgebauter Hau den Lukas im Außenbereich",
     list: [
-      "Publikumsmagnet mit Showeffekt",
-      "Perfekt für Teams, Vereine, Firmen",
-      "Schnell verständlich und sofort spielbar",
+      "für Vereinsfeste, Kirmes, Feiern und Partys",
+      "gut sichtbar auf dem Veranstaltungsgelände",
+      "persönliche Abstimmung zu Einsatzort und Ablauf",
     ],
   },
   {
     title: "Musikanlage",
-    lead: "Professioneller Sound für klare Ansagen.",
-    body: "Die Soundanlage liefert satten Klang für Musik, Moderation und Durchsagen – ideal für Partys, Events oder lokale Feiern.",
+    lead: "Soundtechnik für Musik, Ansagen und Stimmung.",
+    body: "Die Musikanlage wird passend zum Anlass besprochen. Entscheidend sind Ort, Zeitraum, gewünschte Nutzung und ob Musik, Moderation oder Durchsagen im Vordergrund stehen.",
+    image: "/gallery/Bild der Boxen.png",
+    alt: "Musikanlage mit zwei Lautsprechern und Subwoofer",
     list: [
-      "Kraftvoller, klarer Sound",
-      "Ideal für Musik & Moderation",
-      "Passend für Indoor und Outdoor",
+      "für Musik, Moderation und Durchsagen",
+      "als Ergänzung zum Hau den Lukas möglich",
+      "Preis und Umfang nach persönlicher Abstimmung",
     ],
   },
 ];
 
 export default function LeistungenPage() {
   return (
-    <div className="wrap space-y-10 py-10 lg:space-y-12 lg:py-16">
-      <header className="space-y-3 reveal">
-        <p className="section-sub">Leistungen / Vermietung</p>
-        <h1 className="section-title text-xl sm:text-2xl lg:text-4xl">Zwei Highlights für starke Events.</h1>
-        <p className="text-[color:var(--muted)]">
-          Egal ob Volksfest, Firmenfeier oder Geburtstag – HdL-Verleih sorgt für den richtigen Mix aus
-          Wettbewerb, Show und klarem Sound.
+    <div className="wrap space-y-10 py-10 lg:py-16">
+      <header className="max-w-3xl space-y-4">
+        <p className="eyebrow">Angebot</p>
+        <h1 className="section-title">Hau den Lukas und Musikanlage für dein Fest.</h1>
+        <p className="text-lg leading-8 text-[color:var(--muted)]">
+          HDL-Verleih bietet keine anonyme Online-Buchung. Du nennst die Eckdaten deiner Veranstaltung und
+          bekommst eine persönliche Rückmeldung zu Verfügbarkeit, Aufbau, Technik und Preis.
         </p>
       </header>
 
-      <div className="grid gap-8 lg:grid-cols-2">
+      <div className="grid gap-6 lg:grid-cols-2">
         {services.map((service) => (
-          <article
-            key={service.title}
-            className="panel mx-auto w-[92%] max-w-md space-y-4 p-5 !text-left lg:mx-0 lg:w-full lg:max-w-none lg:p-6 reveal-delay-1"
-          >
-            <div>
-              <p className="text-sm uppercase tracking-[0.3em] text-[color:var(--sand)] !text-left">{service.title}</p>
-              <h2 className="mt-3 text-xl font-semibold uppercase tracking-[0.06em] sm:text-2xl sm:tracking-[0.08em] lg:text-2xl !text-left">
-                {service.lead}
-              </h2>
-              <p className="mt-3 text-sm text-[color:var(--muted)] !text-left">{service.body}</p>
-            </div>
-            <ul className="space-y-2 text-sm text-[color:var(--muted)] !text-left">
-              {service.list.map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-[color:var(--gold)]" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <div className="flex flex-col items-start gap-3 border-t border-white/10 pt-4 lg:flex-row lg:items-center lg:justify-between !text-left">
-              <span className="text-sm uppercase tracking-[0.3em] text-[color:var(--sand)]">Preis auf Anfrage</span>
-              <a className="btn-primary w-full lg:w-auto" href="/kontakt">Anfrage stellen</a>
+          <article key={service.title} className="service-card">
+            <Image
+              src={service.image}
+              alt={service.alt}
+              width={900}
+              height={1200}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className={`h-72 w-full ${service.title === "Hau den Lukas" ? "bg-[color:var(--canvas)] object-contain" : "object-cover"}`}
+            />
+            <div className="space-y-5 p-6">
+              <div className="space-y-3">
+                <p className="eyebrow">{service.title}</p>
+                <h2 className="text-2xl font-bold leading-tight text-[color:var(--ink)]">{service.lead}</h2>
+                <p className="text-block">{service.body}</p>
+              </div>
+              <ul className="space-y-2 text-sm leading-6 text-[color:var(--muted)]">
+                {service.list.map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[color:var(--blue)]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="border-t border-[color:var(--line)] pt-5">
+                <Link className="btn-primary w-full sm:w-auto" href="/kontakt">Dazu anfragen</Link>
+              </div>
             </div>
           </article>
         ))}

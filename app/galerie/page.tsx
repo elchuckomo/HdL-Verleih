@@ -2,44 +2,45 @@ import Image from "next/image";
 import { galleryItems } from "../../content/gallery";
 
 export const metadata = {
-  title: "Galerie | HdL-Verleih",
-  description: "Impressionen vom Hau den Lukas und der Musikanlage im Einsatz.",
+  title: "Bilder",
+  description: "Echte Bilder vom Hau den Lukas, der Musikanlage und Zubehör von HDL-Verleih.",
+  alternates: {
+    canonical: "/galerie",
+  },
 };
 
 export default function GaleriePage() {
   return (
-    <div className="wrap space-y-10 py-16">
-      <header className="space-y-4 reveal">
-        <p className="section-sub">Galerie</p>
-        <h1 className="section-title">Starke Momente, starke Stimmung.</h1>
-        <p className="text-[color:var(--muted)]">
-          Hier zeigen wir echte Eindrücke vom Hau den Lukas und der Musikanlage im Einsatz.
+    <div className="wrap space-y-10 py-10 lg:py-16">
+      <header className="max-w-3xl space-y-4">
+        <p className="eyebrow">Bilder</p>
+        <h1 className="section-title">So sieht der Hau den Lukas im Einsatz aus.</h1>
+        <p className="text-lg leading-8 text-[color:var(--muted)]">
+          Keine Stockbilder: Die Galerie zeigt vorhandene Aufnahmen aus dem HDL-Verleih.
         </p>
       </header>
 
       {galleryItems.length === 0 ? (
-        <div className="panel reveal-delay-1">
-          <p className="text-sm uppercase tracking-[0.3em] text-[color:var(--sand)]">Noch keine Bilder</p>
-          <p className="mt-3 text-sm text-[color:var(--muted)]">
-            Lege Bilder unter <span className="font-semibold text-white">public/gallery</span> ab und
-            trage sie in <span className="font-semibold text-white">content/gallery.ts</span> ein.
+        <div className="panel">
+          <p className="eyebrow">Noch keine Bilder</p>
+          <p className="mt-3 text-block">
+            Lege Bilder unter <span className="font-semibold text-[color:var(--ink)]">public/gallery</span> ab und
+            trage sie in <span className="font-semibold text-[color:var(--ink)]">content/gallery.ts</span> ein.
           </p>
         </div>
       ) : (
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="columns-1 gap-5 md:columns-2">
           {galleryItems.map((item) => (
-            <figure key={item.file} className="panel overflow-hidden reveal-delay-1">
+            <figure key={item.file} className="media-frame mb-5 break-inside-avoid">
               <Image
                 src={`/gallery/${item.file}`}
-                alt={item.alt ?? "Galeriebild von HdL-Verleih"}
+                alt={item.alt ?? "Galeriebild von HDL-Verleih"}
                 width={1600}
                 height={1200}
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="h-auto w-full rounded-2xl border border-white/10 object-contain"
+                className="h-auto w-full object-contain"
               />
-              {item.alt ? (
-                <figcaption className="mt-4 text-sm text-[color:var(--muted)]">{item.alt}</figcaption>
-              ) : null}
+              {item.alt ? <figcaption>{item.alt}</figcaption> : null}
             </figure>
           ))}
         </div>

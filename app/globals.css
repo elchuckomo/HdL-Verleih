@@ -1,36 +1,42 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
-  --bg: #0f1113;
-  --bg-soft: #171a1f;
-  --beige: #f2e6d2;
-  --sand: #e4cda5;
-  --wood: #8a5a2b;
-  --iron: #2f353b;
-  --poster: #c04a2b;
-  --gold: #f3b34a;
-  --muted: #b5a38a;
+  color-scheme: light;
+  --canvas: #f4efe7;
+  --paper: #fffaf2;
+  --ink: #20252a;
+  --muted: #59626a;
+  --line: #d9cfc0;
+  --accent: #b93422;
+  --accent-dark: #8f2418;
+  --blue: #165a9f;
+  --sand: #f1d49d;
 }
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: "Trebuchet MS", "Segoe UI", "Verdana", sans-serif;
-  color: var(--beige);
-  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 55%),
-    linear-gradient(145deg, #0d0f12, #12161b 45%, #0b0d10);
-  min-height: 100vh;
+html {
+  scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4 {
-  font-family: "Rockwell", "Copperplate", "Palatino", serif;
-  letter-spacing: 0.02em;
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
 }
 
 a {
@@ -38,82 +44,100 @@ a {
   text-decoration: none;
 }
 
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 0 rgba(243, 179, 74, 0);
-  }
-  50% {
-    box-shadow: 0 0 24px rgba(243, 179, 74, 0.35);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal,
-  .reveal-delay-1,
-  .reveal-delay-2,
-  .reveal-delay-3,
-  .float-glow {
-    animation: none !important;
-  }
+img {
+  display: block;
 }
 
 @layer components {
   .wrap {
-    @apply mx-auto w-full max-w-6xl px-6;
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
   }
 
-  .badge {
-    @apply inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-[0.3em];
-  }
-
-  .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-[color:var(--poster)] px-6 py-3 text-base font-semibold text-white shadow-stamp transition hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--gold)];
-  }
-
-  .btn-ghost {
-    @apply inline-flex items-center justify-center rounded-full border border-[color:var(--gold)] px-6 py-3 text-base font-semibold text-[color:var(--gold)] transition hover:bg-[color:var(--gold)] hover:text-[color:var(--bg)];
-  }
-
-  .panel {
-    @apply rounded-3xl border border-white/10 bg-[color:var(--bg-soft)] p-6 shadow-stamp;
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--accent)];
   }
 
   .section-title {
-    @apply text-3xl sm:text-4xl font-semibold uppercase tracking-[0.12em];
+    @apply text-3xl font-bold leading-tight text-[color:var(--ink)] sm:text-4xl;
   }
 
-  .section-sub {
-    @apply text-sm uppercase tracking-[0.4em] text-[color:var(--sand)];
+  .btn-primary {
+    @apply inline-flex min-h-12 items-center justify-center rounded-md bg-[color:var(--accent)] px-5 py-3 text-base font-bold text-white shadow-stamp transition hover:bg-[color:var(--accent-dark)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent)];
   }
 
-  .reveal {
-    animation: rise 0.8s ease forwards;
+  .btn-ghost {
+    @apply inline-flex min-h-12 items-center justify-center rounded-md border border-[color:var(--line)] bg-white px-5 py-3 text-base font-bold text-[color:var(--ink)] transition hover:border-[color:var(--blue)] hover:text-[color:var(--blue)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--blue)];
   }
 
-  .reveal-delay-1 {
-    animation: rise 0.8s ease 0.12s forwards;
+  .btn-light {
+    @apply inline-flex min-h-12 items-center justify-center rounded-md border border-white/25 bg-white px-5 py-3 text-base font-bold text-[color:var(--ink)] transition hover:bg-[color:var(--sand)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
   }
 
-  .reveal-delay-2 {
-    animation: rise 0.8s ease 0.24s forwards;
+  .btn-small {
+    @apply inline-flex items-center justify-center rounded-md bg-[color:var(--accent)] px-4 py-2 font-bold text-white hover:bg-[color:var(--accent-dark)];
   }
 
-  .reveal-delay-3 {
-    animation: rise 0.8s ease 0.36s forwards;
+  .link {
+    @apply font-semibold text-[color:var(--accent)] underline decoration-transparent underline-offset-4 hover:decoration-current;
   }
 
-  .float-glow {
-    animation: pulse-glow 3.2s ease-in-out infinite;
+  .fact {
+    @apply rounded-md border border-[color:var(--line)] bg-white p-4;
+  }
+
+  .fact dt {
+    @apply text-xs font-bold uppercase tracking-[0.14em] text-[color:var(--muted)];
+  }
+
+  .fact dd {
+    @apply mt-2 text-base font-bold text-[color:var(--ink)];
+  }
+
+  .media-frame {
+    @apply overflow-hidden rounded-md border border-[color:var(--line)] bg-white shadow-stamp;
+  }
+
+  .media-frame figcaption {
+    @apply border-t border-[color:var(--line)] px-4 py-3 text-sm text-[color:var(--muted)];
+  }
+
+  .service-card {
+    @apply overflow-hidden rounded-md border border-[color:var(--line)] bg-white shadow-stamp;
+  }
+
+  .service-card h3 {
+    @apply text-xl font-bold leading-snug text-[color:var(--ink)];
+  }
+
+  .service-card p:not(.eyebrow) {
+    @apply text-sm leading-6 text-[color:var(--muted)];
+  }
+
+  .occasion {
+    @apply rounded-md border border-[color:var(--line)] bg-white px-4 py-4 text-base font-bold text-[color:var(--ink)];
+  }
+
+  .step {
+    @apply grid grid-cols-[3rem_1fr] gap-4 rounded-md border border-[color:var(--line)] bg-white p-5 shadow-stamp;
+  }
+
+  .step span {
+    @apply flex h-10 w-10 items-center justify-center rounded-md bg-[color:var(--blue)] text-base font-bold text-white;
+  }
+
+  .step h3 {
+    @apply text-lg font-bold text-[color:var(--ink)];
+  }
+
+  .step p {
+    @apply mt-2 text-sm leading-6 text-[color:var(--muted)];
+  }
+
+  .panel {
+    @apply rounded-md border border-[color:var(--line)] bg-white p-6 shadow-stamp;
+  }
+
+  .text-block {
+    @apply text-sm leading-7 text-[color:var(--muted)];
   }
 }
