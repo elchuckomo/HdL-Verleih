@@ -168,6 +168,22 @@ export default function RootLayout({
                 <Link href="/impressum">Impressum</Link>
                 <Link href="/datenschutz">Datenschutz</Link>
               </div>
+              <a
+                href="https://chuckomo.de"
+                target="_blank"
+                rel="noreferrer"
+                className="group flex w-fit items-center gap-2 font-semibold text-[color:var(--ink)] transition hover:text-[color:var(--accent)]"
+              >
+                <span>Ein Projekt von</span>
+                <Image
+                  src="/chuckomo-logo-thumb.jpg"
+                  alt="Chuckomo"
+                  width={40}
+                  height={40}
+                  className="h-8 w-8 rounded-full border border-[color:var(--line)] bg-white object-contain transition group-hover:border-[color:var(--accent)]"
+                />
+                <span>Chuckomo</span>
+              </a>
             </div>
           </div>
         </footer>
