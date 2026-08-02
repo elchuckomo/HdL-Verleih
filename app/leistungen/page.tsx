@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { AiGeneratedBadge } from "../../components/AiGeneratedBadge";
 
 export const metadata = {
   title: "Angebot",
@@ -28,7 +29,8 @@ const services = [
     lead: "Soundtechnik für Musik, Ansagen und Stimmung.",
     body: "Die Musikanlage wird passend zum Anlass besprochen. Entscheidend sind Ort, Zeitraum, gewünschte Nutzung und ob Musik, Moderation oder Durchsagen im Vordergrund stehen.",
     image: "/gallery/Bild der Boxen.png",
-    alt: "Musikanlage mit zwei Lautsprechern und Subwoofer",
+    alt: "KI-generiertes Symbolbild einer Musikanlage mit zwei Lautsprechern und Subwoofer",
+    aiGenerated: true,
     list: [
       "für Musik, Moderation und Durchsagen",
       "als Ergänzung zum Hau den Lukas möglich",
@@ -52,14 +54,17 @@ export default function LeistungenPage() {
       <div className="grid gap-6 lg:grid-cols-2">
         {services.map((service) => (
           <article key={service.title} className="service-card">
-            <Image
-              src={service.image}
-              alt={service.alt}
-              width={900}
-              height={1200}
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className={`h-72 w-full ${service.title === "Hau den Lukas" ? "bg-[color:var(--canvas)] object-contain" : "object-cover"}`}
-            />
+            <div className="ai-media">
+              <Image
+                src={service.image}
+                alt={service.alt}
+                width={900}
+                height={1200}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className={`h-72 w-full ${service.title === "Hau den Lukas" ? "bg-[color:var(--canvas)] object-contain" : "object-cover"}`}
+              />
+              {service.aiGenerated ? <AiGeneratedBadge /> : null}
+            </div>
             <div className="space-y-5 p-6">
               <div className="space-y-3">
                 <p className="eyebrow">{service.title}</p>

@@ -101,6 +101,18 @@ img {
     @apply border-t border-[color:var(--line)] px-4 py-3 text-sm text-[color:var(--muted)];
   }
 
+  .ai-media {
+    @apply relative;
+  }
+
+  .ai-generated-badge {
+    @apply pointer-events-none absolute left-2 top-2 z-10 flex h-8 items-center overflow-hidden rounded border border-black/20 bg-white/95 shadow-stamp sm:left-3 sm:top-3 sm:h-9;
+  }
+
+  .ai-generated-badge-icon {
+    @apply h-7 w-[5.6rem] sm:h-8 sm:w-[6.4rem];
+  }
+
   .service-card {
     @apply overflow-hidden rounded-md border border-[color:var(--line)] bg-white shadow-stamp;
   }

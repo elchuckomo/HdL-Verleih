@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { AiGeneratedBadge } from "../../components/AiGeneratedBadge";
 import { galleryItems } from "../../content/gallery";
 
 export const metadata = {
   title: "Bilder",
-  description: "Echte Bilder vom Hau den Lukas, der Musikanlage und Zubehör von HDL-Verleih.",
+  description: "Aufnahmen und Beispiele aus dem Angebot von HDL-Verleih.",
   alternates: {
     canonical: "/galerie",
   },
@@ -16,7 +17,7 @@ export default function GaleriePage() {
         <p className="eyebrow">Bilder</p>
         <h1 className="section-title">So sieht der Hau den Lukas im Einsatz aus.</h1>
         <p className="text-lg leading-8 text-[color:var(--muted)]">
-          Keine Stockbilder: Die Galerie zeigt vorhandene Aufnahmen aus dem HDL-Verleih.
+          Die Galerie zeigt Aufnahmen und Beispiele aus dem Angebot des HDL-Verleihs.
         </p>
       </header>
 
@@ -32,15 +33,18 @@ export default function GaleriePage() {
         <div className="columns-1 gap-5 md:columns-2">
           {galleryItems.map((item) => (
             <figure key={item.file} className="media-frame mb-5 break-inside-avoid">
-              <Image
-                src={`/gallery/${item.file}`}
-                alt={item.alt ?? "Galeriebild von HDL-Verleih"}
-                width={1600}
-                height={1200}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="h-auto w-full object-contain"
-              />
-              {item.alt ? <figcaption>{item.alt}</figcaption> : null}
+              <div className="ai-media">
+                <Image
+                  src={`/gallery/${item.file}`}
+                  alt={item.alt ?? "Galeriebild von HDL-Verleih"}
+                  width={1600}
+                  height={1200}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="h-auto w-full object-contain"
+                />
+                {item.aiGenerated ? <AiGeneratedBadge /> : null}
+              </div>
+              {item.caption ?? item.alt ? <figcaption>{item.caption ?? item.alt}</figcaption> : null}
             </figure>
           ))}
         </div>

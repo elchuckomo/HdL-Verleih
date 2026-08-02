@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { AiGeneratedBadge } from "../components/AiGeneratedBadge";
 
 export const metadata = {
   alternates: {
@@ -115,14 +116,17 @@ export default function HomePage() {
           </article>
 
           <article className="service-card">
-            <Image
-              src="/gallery/Bild der Boxen.png"
-              alt="Musikanlage mit zwei Lautsprechern und Subwoofer"
-              width={1448}
-              height={1086}
-              sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
-              className="h-72 w-full object-cover"
-            />
+            <div className="ai-media">
+              <Image
+                src="/gallery/Bild der Boxen.png"
+                alt="KI-generiertes Symbolbild einer Musikanlage mit zwei Lautsprechern und Subwoofer"
+                width={1448}
+                height={1086}
+                sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                className="h-72 w-full object-cover"
+              />
+              <AiGeneratedBadge />
+            </div>
             <div className="space-y-3 p-5">
               <p className="eyebrow">Musikanlage</p>
               <h3>Sound für Musik, Ansagen und Ablauf.</h3>
